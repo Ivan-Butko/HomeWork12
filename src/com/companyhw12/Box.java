@@ -30,10 +30,7 @@ public class Box {
     public void setLength(int length) {
         if (length > 0) {
             this.length = length;
-        } else {
-            System.out.println("Incorrect data entered.");
-            System.exit(0);
-        }
+        } else messageIncorrectExit();
     }
 
     public int getLength() {
@@ -44,10 +41,7 @@ public class Box {
     public void setWidth(int width) {
         if (width > 0) {
             this.width = width;
-        } else {
-            System.out.println("Incorrect data entered.");
-            System.exit(0);
-        }
+        } else messageIncorrectExit();
     }
 
     public int getWidth() {
@@ -58,10 +52,7 @@ public class Box {
     public void setHeight(int height) {
         if (height > 0) {
             this.height = height;
-        } else {
-            System.out.println("Incorrect data entered.");
-            System.exit(0);
-        }
+        } else messageIncorrectExit();
     }
 
     public int getHeight() {
@@ -72,10 +63,7 @@ public class Box {
     public void setColor(String color) {
         if (!color.equals("")) {
             this.color = color;
-        } else {
-            System.out.println("Incorrect data entered.");
-            System.exit(0);
-        }
+        } else messageIncorrectExit();
     }
 
     public String getColor() {
@@ -86,10 +74,7 @@ public class Box {
     public void setMaterial(String material) {
         if (!material.equals("")) {
             this.material = material;
-        } else {
-            System.out.println("Incorrect data entered.");
-            System.exit(0);
-        }
+        } else messageIncorrectExit();
     }
 
     public String getMaterial() {
@@ -100,6 +85,11 @@ public class Box {
     public double getVolume() {
 
         return volume = length * width * height;
+    }
+
+    private void messageIncorrectExit() {
+        System.out.println("Incorrect data entered.");
+        System.exit(0);
     }
 
     @Override
